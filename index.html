@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Millonarios F.C. · Liga BetPlay 2026-II</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="wrap">
+<header>
+  <button id="theme" type="button">Tema</button>
+  <h1>Millonarios F.C.</h1>
+  <p>Liga BetPlay Dimayor 2026-II · Todos contra todos</p>
+  <div class="chips"><span class="chip">Los Embajadores</span><span class="chip">Bogotá · El Campín</span><span class="chip">Fundado en 1937</span><span class="chip">DT: Alberto Gamero</span></div>
+</header>
+
+<div class="stats" id="stats"></div>
+
+<section>
+  <h2>Tabla de posiciones</h2>
+  <div class="tools">
+    <button class="f on" data-f="all" type="button">Todos</button>
+    <button class="f" data-f="top8" type="button">Zona de clasificación (8)</button>
+    <button class="f" data-f="near" type="button">Cerca de Millonarios</button>
+    <input id="q" type="search" placeholder="Buscar equipo…" aria-label="Buscar equipo">
+  </div>
+  <div class="scroll"><table id="tbl"></table></div>
+  <div class="legend">Línea verde: corte de los 8 clasificados. Tocá una fila para compararla con Millonarios; tocá un encabezado para ordenar. Datos al 12 de octubre de 2026 (tras la jornada 14, con partidos pendientes).</div>
+</section>
+
+<div class="row2">
+  <section>
+    <h2>Comparador</h2>
+    <select id="cmpSel" aria-label="Equipo a comparar"></select>
+    <div id="cmp" style="margin-top:12px"></div>
+  </section>
+  <section>
+    <h2>Simulador del próximo partido</h2>
+    <div class="sim">
+      <button class="f" data-o="3" type="button">Gana</button>
+      <button class="f on" data-o="1" type="button">Empata</button>
+      <button class="f" data-o="0" type="button">Pierde</button>
+    </div>
+    <div class="big" id="simOut"></div>
+    <div class="mut" id="simNote"></div>
+  </section>
+</div>
+
+<section>
+  <h2>Resultados verificados de Millonarios</h2>
+  <div class="tools">
+    <button class="f on" data-r="all" type="button">Todos</button>
+    <button class="f" data-r="G" type="button">Ganados</button>
+    <button class="f" data-r="E" type="button">Empates</button>
+  </div>
+  <div id="res"></div>
+  <div class="mut">Próximo partido: por confirmar en el calendario oficial de Dimayor.</div>
+</section>
+
+<section>
+  <h2>Balance de Millonarios (14 partidos)</h2>
+  <div id="bal"></div>
+</section>
+<footer>Fuente de la tabla: El Universal / EFE, jornada 14 · Datos con fines informativos</footer>
+</div>
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
