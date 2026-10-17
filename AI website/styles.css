@@ -1,0 +1,54 @@
+:root{--bg:#f3f5fa;--card:#fff;--tx:#0e1a33;--mut:#5b6784;--pri:#0b2a6f;--acc:#1f4fd8;--bd:#dde3f0;--g:#1f9d55;--e:#c58a00;--p:#d33a3a;--hl:rgba(31,79,216,.13);box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#090f1f;--card:#121b33;--tx:#e8edf9;--mut:#9aa7c7;--pri:#8aa9ff;--acc:#6e93ff;--bd:#25314f;--hl:rgba(110,147,255,.17)}}
+:root[data-theme="dark"]{--bg:#090f1f;--card:#121b33;--tx:#e8edf9;--mut:#9aa7c7;--pri:#8aa9ff;--acc:#6e93ff;--bd:#25314f;--hl:rgba(110,147,255,.17)}
+*{box-sizing:border-box}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--tx);font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;line-height:1.5}
+.wrap{max-width:1000px;margin:0 auto;padding:16px}
+header{position:relative;overflow:hidden;background:linear-gradient(135deg,#071a4a,#1f4fd8 70%,#3a6cf0);color:#fff;border-radius:20px;padding:28px 24px}
+header::after{content:"";position:absolute;right:-60px;top:-60px;width:220px;height:220px;border-radius:50%;background:rgba(255,255,255,.08)}
+header h1{margin:0;font-size:clamp(1.6rem,5vw,2.4rem);letter-spacing:-.02em}
+header p{margin:4px 0 0;opacity:.85}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.chip{background:rgba(255,255,255,.18);padding:4px 12px;border-radius:99px;font-size:.82rem}
+#theme{position:absolute;right:16px;top:16px;z-index:2;border:0;border-radius:99px;padding:6px 12px;background:rgba(255,255,255,.2);color:#fff;cursor:pointer;font-size:.85rem}
+.stats{display:grid;gap:12px;grid-template-columns:repeat(4,1fr);margin:16px 0}
+@media (max-width:640px){.stats{grid-template-columns:repeat(2,1fr)}}
+.stat{background:var(--card);border:1px solid var(--bd);border-radius:14px;padding:14px;text-align:center;transition:transform .2s}
+.stat:hover{transform:translateY(-3px)}
+.stat b{display:block;font-size:1.9rem;color:var(--pri)}
+.stat span{color:var(--mut);font-size:.82rem}
+section{background:var(--card);border:1px solid var(--bd);border-radius:16px;padding:18px;margin-bottom:16px}
+h2{margin:0 0 12px;font-size:1.1rem;color:var(--pri)}
+.row2{display:grid;gap:16px;grid-template-columns:1fr 1fr}
+@media (max-width:760px){.row2{grid-template-columns:1fr}}
+.tools{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px}
+button.f,select,input{font:inherit;border:1px solid var(--bd);background:var(--bg);color:var(--tx);border-radius:99px;padding:6px 14px;cursor:pointer}
+button.f.on{background:var(--acc);border-color:var(--acc);color:#fff}
+input{cursor:text;flex:1;min-width:140px}
+.scroll{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:.88rem;min-width:520px}
+th,td{padding:8px 6px;text-align:center;border-bottom:1px solid var(--bd)}
+th{cursor:pointer;color:var(--mut);user-select:none;white-space:nowrap}
+th:hover{color:var(--acc)}
+th:nth-child(2),td:nth-child(2){text-align:left}
+tbody tr{cursor:pointer;transition:background .15s}
+tbody tr:hover{background:var(--hl)}
+tr.me{background:var(--hl);font-weight:700}
+tr.sel td:first-child{box-shadow:inset 3px 0 var(--acc)}
+tr.cut td{border-bottom:2px dashed var(--g)}
+.legend{font-size:.78rem;color:var(--mut);margin-top:8px}
+.bar{display:grid;grid-template-columns:70px 1fr 40px;gap:8px;align-items:center;margin:6px 0;font-size:.85rem}
+.track{display:flex;height:10px;border-radius:6px;background:var(--bd);overflow:hidden}
+.fill{height:100%;background:var(--acc);width:0;transition:width .6s}
+.fill.b{background:#8a94ad}
+.cmp{display:grid;grid-template-columns:70px 1fr 1fr;gap:8px;font-size:.85rem;margin:6px 0;align-items:center}
+.cmp .track{flex-direction:row}
+.res{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:10px;border:1px solid var(--bd);border-radius:12px;margin-bottom:8px}
+.badge{width:28px;height:28px;border-radius:50%;display:grid;place-items:center;color:#fff;font-weight:700;font-size:.8rem}
+.G{background:var(--g)}.E{background:var(--e)}.P{background:var(--p)}
+.sim{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}
+.big{font-size:1.5rem;font-weight:700;color:var(--pri)}
+.mut{color:var(--mut);font-size:.82rem}
+footer{text-align:center;color:var(--mut);font-size:.78rem;padding:12px}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
